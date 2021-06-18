@@ -10,8 +10,11 @@ Proje Laravel8 ve sail ile yapılmıştır. Bunun için projeyi çalıştırabil
 Öncelikle projemizin bilgisayardaki konumuna gelip .env.example dosyasını kopyalayıp env ayarlamalarımızı yapıyoruz. 
   ```sh
   cp .env.example .env
-  php artisan key:generate
+ composer install
+ php artisan key:generate
+CACHE_DRIVER=redis
    ```
+
 Sail komutuyla docker containerlerımızı çalıştırıyoruz.
   ```sh
  ./vendor/bin/sail up 
